@@ -81,6 +81,7 @@ class A1_Core {
 	 */
 	public function logged_in()
 	{
+		return FALSE;
 	  if ($this->user->loaded) return $this->user;
 
 		// Get the user from the session
@@ -115,7 +116,8 @@ class A1_Core {
 	
 	public function get_user()
 	{
-		return $this->logged_in();
+		return FALSE;
+		//return $this->logged_in();
 	}
 
 	public function complete_login($user, $remember = FALSE)
@@ -238,7 +240,7 @@ class A1_Core {
 			$this->session->regenerate();
 		}
 
-		return ! $this->logged_in(NULL);
+		return TRUE; //! $this->logged_in(NULL);
 	}
 
 	/**

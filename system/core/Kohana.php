@@ -1073,14 +1073,13 @@ final class Kohana {
 		else
 		{
 		  // Allow subdirectory overrides for views and controllers.
-		  echo($directory);
       if (in_array($directory, array('controllers', 'views'))) {
         $search_override = $directory .'/'. self::config('core.override_path') . $filename.$ext;
       }
 			
 			foreach ($paths as $path)
 			{
-			  if (is_file($path.$search_override)) {
+			  if (isset($search_override) && is_file($path.$search_override)) {
 			    $found = $path.$search_override;
 			    break;
 			  }

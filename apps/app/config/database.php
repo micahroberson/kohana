@@ -46,9 +46,9 @@ $config['default'] = array
 );
 
 if (IN_PRODUCTION || IN_TESTING) {
-  $config['default']['connection']['user'] = '<DBUSER>';
-  $config['default']['connection']['pass'] = '<DBPASS>';
-  $config['default']['connection']['database'] = '<DBNAME>';
+  $config['default']['connection']['user'] = 'root';
+  $config['default']['connection']['pass'] = '';
+  $config['default']['connection']['database'] = 'chapterboard';
 }
 
 $config['test'] = array(
